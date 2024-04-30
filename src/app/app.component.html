@@ -11,7 +11,7 @@
       >
         <ng-icon name="heroArrowDown" />
       </div>
-      @if ( this.isOpen ) {}
+      @if ( this.isOpen ) {
       <div
         class="absolute right-0 z-10 mt-10 mr-4 w-28 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
         appClickedOutside
@@ -49,12 +49,12 @@
           <ng-icon
             size="20"
             class="pr-6"
-            name="      heroArrowLeftEndOnRectangle,
-        "
+            name="heroArrowLeftEndOnRectangle"
           ></ng-icon
           >Sign out
         </button>
       </div>
+      }
     </h2>
   </nav>
   <app-calendar></app-calendar
