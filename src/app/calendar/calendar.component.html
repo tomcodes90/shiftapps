@@ -1,1 +1,40 @@
-<p>calendar works!</p>
+<div class="w-max">
+  <header class="flex items-center justify-between w-80 h-16 mx-auto">
+    <ng-icon
+      (click)="this.calendar.showPreviousMonth()"
+      name="heroArrowLeft"
+      size="24"
+    />
+
+    <h2 class="text-3xl">
+      {{ calendar.header }}
+    </h2>
+    <ng-icon
+      (click)="this.calendar.showNextMonth()"
+      name="heroArrowRight"
+      size="24"
+    />
+  </header>
+
+  <table class="grid grid-cols-7 text-right">
+    @for (item of calendar.daysOfWeek; track $index) {
+    <thead class="w-28 h-10 border-t border-l border-b pt-1 px-5">
+      {{
+        item
+      }}
+    </thead>
+    } @for (item of calendar.calendarMonth; track $index) {
+
+    <tr class="flex justify-end w-28 h-28 border pt-3 px-4">
+      @if (item.number !== "") {
+      <p
+        class="flex items-center justify-center w-8 h-8 border rounded-full"
+        [ngClass]="item.isCurrentDay ? 'bg-blue-200' : ''"
+      >
+        {{ item.number }}
+      </p>
+      }
+    </tr>
+    }
+  </table>
+</div>

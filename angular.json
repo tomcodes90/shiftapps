@@ -101,6 +101,23 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "version": 2
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "shiftapps:build:production",
+              "serveTarget": "shiftapps:serve:production"
+            },
+            "development": {
+              "buildTarget": "shiftapps:build:development",
+              "serveTarget": "shiftapps:serve:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }

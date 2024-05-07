@@ -42,8 +42,7 @@ export class AppComponent {
     console.log(this.isOpen);
   };
   closeMenu = () => {
-    if (this.isOpen === true) {
-      this.isOpen = false;
-    }
+    this.isOpen = !this.isOpen;
+    console.log(this.isOpen);
   };
 }

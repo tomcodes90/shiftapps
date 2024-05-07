@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "taskmanager-5652c": {
+      "hosting": {
+        "shiftapps": [
+          "taskmanager-5652c"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "taskmanager-5652c"
+  }
+}
