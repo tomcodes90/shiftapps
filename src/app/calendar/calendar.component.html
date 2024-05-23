@@ -1,4 +1,4 @@
-<div class="w-max">
+<div class="flex flex-col justify-center items-center w-screen">
   <header class="flex items-center justify-between w-80 h-16 mx-auto">
     <ng-icon
       (click)="this.calendar.showPreviousMonth()"
@@ -25,7 +25,9 @@
     </thead>
     } @for (item of calendar.calendarMonth; track $index) {
 
-    <tr class="flex justify-end w-28 h-28 border pt-3 px-4">
+    <tr
+      class="flex flex-col pl-14 items-center gap-4 w-28 h-28 border pt-3 px-4"
+    >
       @if (item.number !== "") {
       <p
         class="flex items-center justify-center w-8 h-8 border rounded-full"
@@ -33,6 +35,7 @@
       >
         {{ item.number }}
       </p>
+      <span>0 / 7</span>
       }
     </tr>
     }
